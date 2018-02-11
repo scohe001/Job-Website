@@ -1,0 +1,38 @@
+/* credit to: https://codepen.io/morewry/pen/gbJvy */
+@keyframes growFontSize {
+    0% {
+    font-size: 0;
+    }
+    100% {
+    font-size: 1em;
+    }
+}
+
+/*.myDetails[open] .content {
+    animation-name: growFontSize;
+    animation-duration: 500ms, 200ms;
+    animation-delay: 0ms, 500ms;
+}*/
+
+/* credit to: https://stackoverflow.com/questions/38213329/ */
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+    /*display: none;*/
+    width:15px;
+    height:15px;
+    margin-right:2%;
+    margin-top:7px;
+    float: left;
+}
