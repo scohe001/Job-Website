@@ -26,6 +26,7 @@ details[open] summary ~ * {
 
 details > summary {
     list-style: none;
+    outline-style:none;
 }
 
 details > summary::-webkit-details-marker {
