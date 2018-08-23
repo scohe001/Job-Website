@@ -1,0 +1,162 @@
+\documentclass[10pt]{article}
+%\input{assignment-macros-0}
+\usepackage{amssymb} %empty set character
+\usepackage[paper=letterpaper,headsep=15pt,left=35pt,top=30pt,right=35pt,bottom=30pt,includeheadfoot]{geometry}
+%\usepackage{times} %set font to times
+\usepackage{parskip} %don't indent new paragraphs
+\usepackage{enumitem} %bullet lists
+\usepackage[usenames,dvipsnames]{xcolor} %fancy colors
+\definecolor{lightgreen}{HTML}{8BC34A}
+\usepackage[urlcolor=teal,colorlinks=true]{hyperref} %for \url
+\usepackage{xstring} %pull out substrings in newcommands
+\usepackage{pifont} %dings
+\usepackage[outline]{contour} %bolder bold
+%\setlist{nolistsep} %prevent ugly spacing in lists
+
+\usepackage{fancyhdr} %for fancy headers/footers
+\setlength{\headheight}{50pt}
+%\setlength{\voffset}{0pt}
+\pagestyle{fancy}
+\fancyhf{} %set header line to nothing so we don't get one
+\renewcommand{\headrulewidth}{0pt}
+
+%Define commands to make bullet lists
+\newlist{things}{itemize}{1}
+\setlist[things]{label*=\textbullet,noitemsep,topsep=-8pt,itemsep=0pt,partopsep=0pt,after=\vspace{5pt}}
+\setlist[things,1]{ref=\arabic*}
+\setlist[things,2]{ref=\arabic{stepsi}.\arabic*}
+\newcommand{\THINGS}{things}
+
+\newcommand{\thing}[1][]{\item #1}
+
+\newcommand{\sectionheader}[1]{
+    \vspace{3pt}
+    \StrSplit{#1}{3}{\firstpart}{\lastpart} %split string around 3rd char
+    %\textbf{\LARGE\textcolor{lightgreen}{\ding{228}}} %Add an arrow
+    %\textbf{\LARGE #1}\\[5pt] %just throw raw text
+    \textbf{\LARGE
+        \contournumber{50}
+        \contourlength{.1pt}
+        \hspace{-20pt}
+        \contour{lightgreen}{\textcolor{lightgreen}{\firstpart}}
+        \hspace{-13pt} %remove extra space added by super bold
+        \lastpart
+    }\\[5pt]
+}
+
+\newcommand{\dates}[2]{
+    \textbf{#1-\textcolor{lightgreen}{#2}}
+    %\textbf{\textcolor{lightgreen}{#1}}
+}
+%\newcommand{\dates}[1]{#1}
+
+\chead{
+    \textbf{\huge Stanley Ari Cohen}\\
+    514 Kristen Court, Encinitas, CA 92024\\
+    (760)846-6814; a12n@mac.com
+}
+
+\begin{document}
+
+    \sectionheader{Objective}
+    Seeking a full time software engineering position to gain 
+    experience and utilize my knowledge of physics, CS, 
+    and calculus based maths.
+    
+    \sectionheader{Education}
+    University California Riverside \hfill %fill line so date will right align
+    \dates{Sept 2013}{June 2017}\\
+    \textbf{Bachelor of Science in Computer Science}
+    
+    \sectionheader{Experience}
+    \textbf{\large Thales USA} \hfill \dates{July 2017}{Current}\\
+    \textit{Software Engineer}
+    \begin{things}
+        \thing Troubleshoot and identify systems issues in 
+                    the lab prior to them being fielded
+        \thing Coordinate with Generic IVV and System Software Integrators
+                    to anticipate issues on customer labs
+        \thing Help train and develop the Customer IVV and 
+                    GIIV teams to ensure a better understanding of our system
+        \thing Create automation scripts to help Customer IVV
+                with stress testing and bug finding
+    \end{things}
+
+    \textbf{\large Northrop Grumman} \hfill \dates{June}{Sept 2015}\\
+    \textit{Software Design and Programming Intern}
+    \begin{things}
+        \thing Used Blender to model and render pieces of the scene
+                for use in simulations
+        \thing Worked in C++ and Visual Studio to develop a simulation
+                plugin that utilized IEEE DIS
+        \thing Performed software regression testing to ensure requirements
+                were met
+    \end{things}
+
+    \textbf{\large Software Consultant} \hfill \dates{June 2011}{June 2015}\\
+    \textit{Software Design and Programmer}
+    \begin{things}
+        \thing Actively recruited and worked with customers to define
+                software requirements. Delivered software that exceeded
+                expectations in a timely manner
+        \thing Designed and programmed an Objective-C app to manage
+                accounts for both locations of La Costa Kids
+        \thing Designed and programmed a Python application to manage
+                the FPAP football pool: catalogue players choices
+                into an excel sheet and later check them against the
+                winning teams pulled from NFL.com
+    \end{things}
+
+    \textbf{\large Northrop Grumman} \hfill \dates{June}{Sept 2014}\\
+    \textit{Software Design and Programming Intern}
+    \begin{things}
+        \thing Worked within a team of systems engineers to develop
+                software requirements to meet customer needs
+        \thing Created interactive JavaFX GUI that interfaces with a
+                SQL database to support air vehicle management
+    \end{things}
+    %For whatever reason there's extra space here
+    %This is down and dirty, but it works...
+    %\vspace{-13pt} 
+
+
+    \textbf{\large Scripps Research Institute} \hfill \dates{May}{Aug 2013}\\
+    \textit{Software Design and Programming Intern}
+    \begin{things}
+        \thing Wrote GUI code to support medical research applications
+        \thing Designed molecular structures for use in 3D printing
+                to be utilized for educational outreach
+        \thing Assembled work stations to support lab growth
+    \end{things}
+
+    \sectionheader{Projects}
+    \textbf{\large "Space Maze" Game} \hfill \dates{Jan}{Mar 2016}
+    \begin{things}
+        \thing Constructed a game using an Arduino, Atmega1284,
+                joystick, 16x32 LED Matrix and dual speaker system
+        \thing Designed and implemented several Constructed State
+                Machines in C to perform the logic of the game
+        \thing A quick demo can be found at \url{https://youtu.be/efGDMYA2zpI}
+    \end{things}
+
+    \textbf{\large "Melody Matcher" Game} \hfill \dates{Jan}{Mar 2015}
+    \begin{things}
+        \thing Worked in HTML, JavaScript and CSS with another
+                CS student to build a musical educational Web App
+        \thing The repository (with a link to the Web App) can be
+                found at \url{https://github.com/MiaoXiao/Melody-Matcher}
+    \end{things}
+
+    \sectionheader{Skills}
+    \vspace{-15pt} %kill the space here since we have an immediate bullet list
+    \begin{things}
+        \thing Software Language Skills: C/C++, Python, Bash,
+                Java and Objective-C
+        \thing Rational approach to problems with the ability to
+                break down complex procedures into multiple tasks
+                which can then easily be assigned algorithms
+        \thing Excellent communications skills both written and verbal
+    \end{things}
+
+\end{document}
+
