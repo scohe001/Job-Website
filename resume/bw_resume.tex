@@ -5,12 +5,9 @@
 %\usepackage{times} %set font to times
 \usepackage{parskip} %don't indent new paragraphs
 \usepackage{enumitem} %bullet lists
-\usepackage[usenames,dvipsnames]{xcolor} %fancy colors
-\definecolor{lightgreen}{HTML}{8BC34A}
-\usepackage[urlcolor=teal,colorlinks=true]{hyperref} %for \url
+\usepackage[colorlinks=true]{hyperref} %for \url
 \usepackage{xstring} %pull out substrings in newcommands
 \usepackage{pifont} %dings
-\usepackage[outline]{contour} %bolder bold
 %\setlist{nolistsep} %prevent ugly spacing in lists
 
 \usepackage{fancyhdr} %for fancy headers/footers
@@ -35,17 +32,13 @@
     %\textbf{\LARGE\textcolor{lightgreen}{\ding{228}}} %Add an arrow
     %\textbf{\LARGE #1}\\[5pt] %just throw raw text
     \textbf{\LARGE
-        \contournumber{50}
-        \contourlength{.1pt}
-        \hspace{-20pt}
-        \contour{lightgreen}{\textcolor{lightgreen}{\firstpart}}
-        \hspace{-12pt} %remove extra space added by super bold
+        \firstpart
         \lastpart
     }\\[5pt]
 }
 
 \newcommand{\dates}[2]{
-    \textbf{#1-\textcolor{lightgreen}{#2}}
+    \textbf{#1-#2}
     %\textbf{\textcolor{lightgreen}{#1}}
 }
 %\newcommand{\dates}[1]{#1}
