@@ -21,7 +21,7 @@
 
 %Define commands to make bullet lists
 \newlist{things}{itemize}{1}
-\setlist[things]{label*=\textbullet,noitemsep,topsep=-8pt,itemsep=0pt,partopsep=0pt,after=\vspace{5pt}}
+\setlist[things]{label*=\textbullet,noitemsep,topsep=-8pt,itemsep=0pt,partopsep=0pt,after=\vspace{10pt}}
 \setlist[things,1]{ref=\arabic*}
 \setlist[things,2]{ref=\arabic{stepsi}.\arabic*}
 \newcommand{\THINGS}{things}
@@ -36,14 +36,6 @@
     \makebox[0pt][l]{\textbf{\LARGE\firstpart\lastpart}}%%
     \rule[-1ex]{\columnwidth}{.1pt}
 
-    % \textbf{\LARGE
-    %     \firstpart
-    %     \lastpart
-    % }\\[1pt]
-    % \kern100pt
-    % \hrule height .1pt
-    % \kern1pt
-    % \noindent\rule[0ex]{\textwidth}{.1pt}
 }
 
 \newcommand{\dates}[2]{
@@ -60,24 +52,28 @@
 
 \begin{document}
 
-    \sectionheader{Objective}
-    Seeking a full time software engineering position to gain 
-    experience and utilize my knowledge of physics, CS, 
-    and calculus based maths.
+    \sectionheader{Professional Summary}
+    Senior Software Engineer with over 6 years of full stack
+        experience specializing in .NET, Angular, and MS SQL.
+        Likes working closely with clients to ensure quality
+        deliveries.
     
     \sectionheader{Experience}
     \textbf{\large Tyler Technologies} \hfill \dates{Sept 2018}{Current}\\
     \textit{\textbf{Senior Software Engineer}}
     \begin{things}
-        \thing Facilitate team scrum and retrospective meetings, promoting open communication
-                    and a collaborative environment that fosters trust, engagement, and high performance.
-        \thing Collaborate across multiple internal teams to coordinate and integrate efforts
-                    on large-scale projects. Ensure seamless communication, alignment of goals,
-                    and on-time delivery of key milestones.
-        \thing Trained support representatives in SQL to perform routine data fixes independently,
-                    reducing reliance on developers and saving ~800 hours of engineering time anually.
-        \thing Partner with the support team to investigate and resolve client-reported software
-                    issues, ensuring timely solutions and maintaining a positive customer experience.
+        \thing Facilitate team scrum and retrospective meetings for 13-person development team.
+                % , promoting open communication and a collaborative 
+                % environment that fosters trust, engagement, and high performance.
+        \thing Lead development on several contracts totaling \textgreater\$700K
+        \thing Trained support representatives in SQL to perform routine
+                    data fixes independently, reducing reliance on developers
+                    and saving $\sim$800 hours of engineering time anually.
+        \thing Resolved the most support tickets on the team 2 years in
+                    a row (150\% more than the next most prodcutive developer).
+        % \thing Collaborate across multiple internal teams to coordinate and integrate efforts
+        %             on large-scale projects. Ensure seamless communication, alignment of goals,
+        %             and on-time delivery of key milestones.
     \end{things}
 
     \textbf{\large Thales USA} \hfill \dates{July 2017}{Aug 2018}\\
@@ -85,37 +81,26 @@
     \begin{things}
         \thing Troubleshooted and identified systems issues in 
                     the lab prior to them being fielded.
-        \thing Helped train and develop the Customer IVV and 
+        \thing Helped train and develop 5 Customer IVV and 
                     GIIV teams to ensure a better understanding of our system.
-        \thing Created automation scripts to help Customer IVV
-                with stress testing and bug finding.
-    \end{things}
-
-    \textbf{\large Northrop Grumman} \hfill \dates{June}{Sept 2015}\\
-    \textit{\textbf{Software Design and Programming Intern}}
-    \begin{things}
-        \thing Used Blender to model and render pieces of the scene
-                for use in simulations.
-        \thing Worked in C++ and Visual Studio to develop a simulation
-                plugin that utilized IEEE DIS.
-        \thing Performed software regression testing to ensure requirements
-                were met.
+        \thing Developed automation scripts to stress test systems, reducing
+                    QA time by 15 man-hours per installation.
     \end{things}
 
     \textbf{\large La Costa Kids} \hfill \dates{June 2011}{June 2015}\\
-    \textit{\textbf{Software Design Consultant}}
+    \textit{\textbf{Software Consultant}}
     \begin{things}
         \thing Designed and implemented an Objective-C solution to
                 manage \textgreater30K transactions and \textgreater5K
                 customers' information across 2 physical store locations.
         \thing Saved 100+ hours per year of cashier-hours looking
                 up and entering transactions.
-        \thing Built 3 reports and an HTML dashboard to allow for
-                monitoring trends and saved 15 hours per year on tax reporting.
+        \thing Built 3 reports and an HTML dashboard that provided data insight
+                into benchmark marketing trends and simplified annual tax reporting.
     \end{things}
 
     \textbf{\large FPAP Football Pool} \hfill \dates{June 2011}{June 2015}\\
-    \textit{\textbf{Software Design Consultant}}
+    \textit{\textbf{Software Consultant}}
     \begin{things}
         \thing Designed and implmented a Python solution to manage
                 manage players' betting choices and check them against
@@ -129,54 +114,28 @@
     % \textit{\textbf{Software Design and Programming Intern}}
     % \begin{things}
     %     \thing Worked within a team of systems engineers to develop
-    %             software requirements to meet customer needs.
+    %             a Java solution software requirements to meet customer needs.
     %     \thing Created interactive JavaFX GUI that interfaces with a
     %             SQL database to support air vehicle management.
     % \end{things}
-    % %For whatever reason there's extra space here
-    % %This is down and dirty, but it works...
-    % %\vspace{-13pt} 
-
-    % \textbf{\large Scripps Research Institute} \hfill \dates{May}{Aug 2013}\\
-    % \textit{\textbf{Software Design and Programming Intern}}
-    % \begin{things}
-    %     \thing Wrote GUI code to support medical research applications
-    %     \thing Designed molecular structures for use in 3D printing
-    %             to be utilized for educational outreach
-    %     \thing Assembled work stations to support lab growth
-    % \end{things}
+    %For whatever reason there's extra space here
+    %This is down and dirty, but it works...
+    %\vspace{-13pt} 
     
     \sectionheader{Education}
     University California Riverside \hfill %fill line so date will right align
     \dates{Sept 2013}{June 2017}\\
     \textbf{Bachelor of Science in Computer Science}
 
-    % Too old for this to matter now
-    % \sectionheader{Projects}
-    % \textbf{\large "Space Maze" Game} \hfill \dates{Jan}{Mar 2016}
-    % \begin{things}
-    %     \thing Constructed a game using an Arduino, Atmega1284,
-    %             joystick, 16x32 LED Matrix and dual speaker system
-    %     \thing A quick demo can be found at \url{https://youtu.be/efGDMYA2zpI}
-    % \end{things}
-
-    % \textbf{\large "Melody Matcher" Game} \hfill \dates{Jan}{Mar 2015}
-    % \begin{things}
-    %     \thing Worked in HTML, JavaScript and CSS with another
-    %             CS student to build a musical educational Web App
-    %     \thing The repository (with a link to the Web App) can be
-    %             found at \url{https://github.com/MiaoXiao/Melody-Matcher}
-    % \end{things}
 
     \sectionheader{Skills}
     % \vspace{-15pt} %kill the space here since we have an immediate bullet list
     \vspace{5pt} % Actually need more space now with the lines
     \begin{things}
-        \thing Software Language Skills: C$^\sharp$, C/C++, Python, SQL,
-                Typescript, HTML, CSS, Bash
-        \thing Rational approach to problems with the ability to
-                break down complex procedures into multiple tasks
-                which can then easily be assigned algorithms
+        \thing \textbf{Software Language Skills:} C$^\sharp$, C/C++,
+                Python, SQL, Typescript, HTML, CSS, Bash
+        \thing \textbf{Tools \& More:} Agile methodology, Git,
+                Mercurial SCM, RESTful APIs, Postman, JIRA
     \end{things}
 
 \end{document}
