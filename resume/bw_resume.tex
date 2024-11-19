@@ -21,7 +21,7 @@
 
 %Define commands to make bullet lists
 \newlist{things}{itemize}{1}
-\setlist[things]{label*=\textbullet,noitemsep,topsep=-8pt,itemsep=0pt,partopsep=0pt,after=\vspace{10pt}}
+\setlist[things]{label*=\textbullet,noitemsep,topsep=-8pt,itemsep=1pt,partopsep=10pt,after=\vspace{10pt}}
 \setlist[things,1]{ref=\arabic*}
 \setlist[things,2]{ref=\arabic{stepsi}.\arabic*}
 \newcommand{\THINGS}{things}
@@ -63,20 +63,20 @@
     \textbf{\large Tyler Technologies} \hfill \dates{Sept 2018}{Current}\\
     \textit{\textbf{Senior Software Engineer}}
     \begin{things}
-        \thing Facilitate team scrum and retrospective meetings for 13-person development team.
-                % , promoting open communication and a collaborative 
-                % environment that fosters trust, engagement, and high performance.
         \thing Lead development on several contracts totaling \textgreater\$700K
-        \thing Trained support representatives in SQL to perform routine
+        \thing Resolve the most support tickets on the team 2 years in
+                    a row (150\% more than the next most prodcutive developer).
+        \thing Train support representatives in SQL to perform routine
                     data fixes independently, reducing reliance on developers
                     and saving $\sim$800 hours of engineering time anually.
-        \thing Resolved the most support tickets on the team 2 years in
-                    a row (150\% more than the next most prodcutive developer).
-        \thing Adhered to the Test Driven Development paradigm,
+        \thing Adhere to the Test Driven Development paradigm,
                     creating and maintaining \textgreater1000 unit tests.
-        % \thing Collaborate across multiple internal teams to coordinate and integrate efforts
-        %             on large-scale projects. Ensure seamless communication, alignment of goals,
-        %             and on-time delivery of key milestones.
+        \thing Facilitate team scrum and retrospective meetings for 13-person
+                development team, promoting open communication and a collaborative 
+                environment that fosters trust, engagement, and high performance.
+        \thing Collaborate across multiple internal teams to coordinate and integrate efforts
+                    on large-scale projects. Ensure seamless communication, alignment of goals,
+                    and on-time delivery of key milestones.
     \end{things}
 
     \textbf{\large Thales USA} \hfill \dates{July 2017}{Aug 2018}\\
@@ -132,10 +132,8 @@
 
 
     \sectionheader{Skills}
-    % \vspace{-15pt} %kill the space here since we have an immediate bullet list
-    \vspace{5pt} % Actually need more space now with the lines
     \begin{things}
-        \thing \textbf{Software Language Skills:} C\# (\textgreater10K lines), C/C++,
+        \thing \textbf{Software Languages:} C\# (\textgreater10K lines written), C/C++,
                 Python, SQL, Typescript, HTML, CSS, Bash
         \thing \textbf{Frameworks:} .NET, Entity Framework, NUnit, IdeaBlade, Infragistics
         \thing \textbf{Tools \& More:} Agile methodology, Git,
