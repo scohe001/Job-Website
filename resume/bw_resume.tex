@@ -11,6 +11,7 @@
 \usepackage{fancyhdr} %for fancy headers/footers
 % \usepackage[T1]{fontenc} % Tried a new font codec but don't like
 \usepackage{tipa} % for textpipe
+\usepackage{ulem} % Strikethrough
 
 %\setlist{nolistsep} %prevent ugly spacing in lists
 \setlength{\headheight}{50pt}
@@ -42,40 +43,76 @@
     \textbf{#1 -- #2}
     %\textbf{\textcolor{lightgreen}{#1}}
 }
-%\newcommand{\dates}[1]{#1}
+
+% Raise special symbols a little (by default they look too low)
+\newcommand{\+}{\raisebox{0.2ex}{+}} % plus signs
+\newcommand{\gt}{\raisebox{0.1ex}{\textgreater}} % > signs
+\newcommand{\hash}{\raisebox{0.3ex}{\#}} % # signs
 
 \chead{
     \textbf{\huge Stanley \hspace{-3pt}Ari \hspace{-1pt}Cohen}\\
-    Morrisville, NC 27560\\
+    Durham, NC 27703\\
     (760)846-6814 \textpipe{} a12n@mac.com
 }
 
 \begin{document}
 
-    \sectionheader{Professional Summary}
-    Senior Software Engineer with over 6 years of full stack
-        experience specializing in .NET, Angular, and MS SQL.
-        Likes working closely with clients to ensure quality
-        deliveries. Passionate about APIs, unit tests, and
-        cross-team collaborations.
+    % \sectionheader{Professional Summary}
+    % Senior Software Engineer with over 6 years of full stack
+    %     experience specializing in .NET, Angular, and MS SQL.
+    %     Likes working closely with clients to ensure quality
+    %     deliveries. Passionate about APIs, unit tests, and
+    %     cross-team collaborations.
+
+    \sectionheader{Skills}
+    \begin{things}
+        \thing \textbf{Software Languages:} C\hash, C/C\+\+,
+                Python, SQL, Typescript, HTML, CSS, Bash
+        \thing \textbf{Frameworks:} .NET, Entity Framework, NUnit, IdeaBlade, Infragistics
+        \thing \textbf{Tools \& More:} Agile methodology, Git,
+                Mercurial SCM, RESTful APIs, Postman, JIRA
+    \end{things}
+    %For whatever reason there's extra space here
+    %This is down and dirty, but it works...
+    \vspace{-13pt}
     
     \sectionheader{Experience}
-    \textbf{\large Tyler Technologies} \hfill \dates{Sept 2018}{Current}\\
+    \textbf{\large Tyler Technologies} \hfill \dates{Mar 2024}{Current}\\
     \textit{\textbf{Senior Software Engineer}}
     \begin{things}
-        \thing Lead development on several contracts totaling \textgreater\$700K
-        \thing Resolve the most support tickets on the team 2 years in
-                    a row (150\% more than the next most prodcutive developer).
-        \thing Train support representatives in SQL to perform routine
+        \thing Lead development on several contracts resulting in
+                \gt\$700K of company profit.
+        \thing Win the internal hackathon (with \gt70 entrants) three years in a row
+                    with the projects going on to be implemented in production,
+                    preventing several potentially critical bugs and saving our support
+                    teams 100+ hours annually.
+        \thing Develop and support an internal tool to simplify data entry for support cases that is
+                    used by 17 teams, saving developers \gt100 hours annually. Collaborate
+                    across teams to continue supporting and enhancing the tool to maximize gains.
+        \thing Manage a team of four developers, working with them to grow and advance
+                    their careers.
+        \thing Work with Product and Support to understand client deadlines
+                    and ensure work is planned properly.
+    \end{things}
+
+    \textbf{\large Tyler Technologies} \hfill \dates{Sept 2018}{Mar 2024}\\
+    \textit{\textbf{Software Engineer}}
+    \begin{things}
+        \thing Managed \gt40\% of our support ticket queue and was a top contributor
+                    within a 5-person team two years in a row.
+        \thing Resolved 260 critical tickets preventing clients from using major features.
+        \thing Adhere to the Test Driven Development (TDD) paradigm,
+                    creating and maintaining \gt1000 unit tests with
+                    more than 20 bugs caught before being released to production.
+        \thing Trained support representatives in SQL to perform routine
                     data fixes independently, reducing reliance on developers
-                    and saving $\sim$800 hours of engineering time anually.
-        \thing Adhere to the Test Driven Development paradigm,
-                    creating and maintaining \textgreater1000 unit tests.
-        \thing Facilitate team scrum and retrospective meetings for 13-person
+                    and saving $\sim$800 hours of engineering time annually.
+        \thing Facilitated team scrum and retrospective meetings for 13-person
                 development team, promoting open communication and a collaborative 
                 environment that fosters trust, engagement, and high performance.
-        \thing Collaborate across multiple internal teams to coordinate and integrate efforts
-                    on large-scale projects. Ensure seamless communication, alignment of goals,
+        \thing Delivered on seven large-scale projects through being able to collaborate across
+                    multiple internal teams to coordinate and integrate efforts.
+                    Ensure seamless communication, alignment of goals,
                     and on-time delivery of key milestones.
     \end{things}
 
@@ -83,62 +120,88 @@
     \textit{\textbf{Software Engineer}}
     \begin{things}
         \thing Troubleshooted and identified systems issues in 
-                    the lab prior to them being fielded.
-        \thing Helped train and develop 5 Customer IVV and 
-                    GIIV teams to ensure a better understanding of our system.
-        \thing Developed automation scripts to stress test systems, reducing
-                    QA time by 15 man-hours per installation.
+                    the lab, proactively resulting in \gt125 issues being resolved before release
+        \thing Trained and developed 5 QA teams to ensure a better understanding of our system.
+        \thing Developed automation scripts in Bash and C\+\+ to stress test systems, reducing
+                    QA time by 15 hours per installation.
     \end{things}
 
     \textbf{\large La Costa Kids} \hfill \dates{June 2011}{June 2015}\\
     \textit{\textbf{Software Consultant}}
     \begin{things}
-        \thing Designed and implemented an Objective-C solution to
-                manage \textgreater30K transactions and \textgreater5K
-                customers' information across 2 physical store locations.
-        \thing Saved 100+ hours per year of cashier-hours looking
-                up and entering transactions.
-        \thing Built 3 reports and an HTML dashboard that provided data insight
-                into benchmark marketing trends and simplified annual tax reporting.
+        \thing Designed and implemented an Objective-C infrastructure solution to
+                manage \gt30K transactions and \gt5K customers' information
+                across 2 physical store locations, saving cashiers
+                \gt100 hours per year looking up and entering transactions.
+        \thing Simplified customer interaction required for new transactions,
+                allowing for shorter wait times and lines in-store.
+        \thing Built an Angular cloud dashboard that provided data insight
+                into benchmarking marketing trends and simplified annual tax reporting.
     \end{things}
 
     \textbf{\large FPAP Football Pool} \hfill \dates{June 2011}{June 2015}\\
     \textit{\textbf{Software Consultant}}
     \begin{things}
-        \thing Designed and implmented a Python solution to manage
+        \thing Designed and implemented a Python solution to manage
                 manage players' betting choices and check them against
-                live scores on NFL.com.
-        \thing Saved the pool manager 10+ hours per week.
-        \thing Delivered results to players days earlier and eliminated
-                all data entry errors.
+                live scores on NFL.com, saving the pool manager
+                \gt10 hours per week and eliminitating 100\% of data entry errors.
+        \thing Maintained the system to scale as player pools grew and
+                NFL data formats changed, ensuring quick and accurate results.
     \end{things}
-
-    % \textbf{\large Northrop Grumman} \hfill \dates{June}{Sept 2014}\\
-    % \textit{\textbf{Software Design and Programming Intern}}
-    % \begin{things}
-    %     \thing Worked within a team of systems engineers to develop
-    %             a Java solution software requirements to meet customer needs.
-    %     \thing Created interactive JavaFX GUI that interfaces with a
-    %             SQL database to support air vehicle management.
-    % \end{things}
-    %For whatever reason there's extra space here
-    %This is down and dirty, but it works...
-    %\vspace{-13pt} 
     
     \sectionheader{Education}
-    University California Riverside \hfill %fill line so date will right align
-    \dates{Sept 2013}{June 2017}\\
+    University California Riverside \hfill \dates{Sept 2013}{June 2017}\\
     \textbf{Bachelor of Science in Computer Science}
 
+    % \newpage
+    % \sectionheader{Notes}
+    % \textbf{\large General} \\
+    % \begin{things}
+    %     \thing \sout{Center the plus and greater thans (they're too low).} %
+    %     \thing \sout{Can we find enough bullets so that professional summary isn't needed?} %
+    %     \thing \sout{At the very least, kill sentence 2 and give some why's for sentence 3.} %
+    %     \thing \sout{If barely going over the line, cut it down to 1} %
+    %     \thing \sout{Each bullet should be about the full line's length} %
+    % \end{things}
 
-    \sectionheader{Skills}
-    \begin{things}
-        \thing \textbf{Software Languages:} C\# (\textgreater10K lines written), C/C++,
-                Python, SQL, Typescript, HTML, CSS, Bash
-        \thing \textbf{Frameworks:} .NET, Entity Framework, NUnit, IdeaBlade, Infragistics
-        \thing \textbf{Tools \& More:} Agile methodology, Git,
-                Mercurial SCM, RESTful APIs, Postman, JIRA
-    \end{things}
+    % \textbf{\large Tyler Technologies} \\
+    % \begin{things}
+    %     \thing \sout{Put number of resolved support tickets} %
+    %     \thing \sout{I supported the product (I managed XYZ percent of our support ticket queue and was our
+    %             top contributor two years in a row). Resolved XYZ number of critical tickets that were
+    %             preventing clients from using major features.} %
+    %     \thing \sout{Add to Unit Tests--with more than 20 bugs caught before they made it to prod} %
+    %     \thing \sout{Provide a number of the large scale products for the final bullet point} %
+    %     \thing \sout{Integrate through the collaboartion. Delivered on over 10 large scale products.
+    %             Through being able to do coordination/integration/etc.} %
+    % \end{things}
+
+    % \textbf{\large Thales} \\
+    % \begin{things}
+    %     \thing \sout{Put 125\+ on issues for Thales bullet 1.} %
+    %     \thing \sout{Prior to being fielded \textrightarrow Proactively resulting in XYZ percent of issues being solved...} %
+    %     \thing \sout{Or in a proactive approach to limit issues that happen in production.} %
+    %     \thing \sout{Helped train and develop XYZ to... We don't really like this one} %
+    %     \thing \sout{Reword to better explain what they were being trained for} %
+    % \end{things}
+
+    % \textbf{\large La Costa Kids} \\
+    % \begin{things}
+    %     \thing \sout{Transactions per day instead of total?} %
+    %     \thing \sout{Objective-C infrastructure solution (make sure to mention the infrastructure!)} %
+    %     \thing \sout{Add something in that mentions the cadence of movement that happens in the process} %
+    %     \thing \sout{Mention the new transactions/customers coming in} %
+    %     \thing \sout{Move the saved hours into the first bullet (, saving)} %
+    % \end{things}
+
+    % \textbf{\large FPAP} \\
+    % \begin{things}
+    %     \thing \sout{Bullets on FPAP for here's what I did around maintenance} %
+    %     \thing \sout{First bullet is , which saved the pool manager + eliminated 100 percent of data entry errors} %
+    %     \thing \sout{Maintained this system to scalability} %
+    %     \thing \sout{Debugged this issue with led to this result} %
+    % \end{things}
 
 \end{document}
 
